@@ -6,6 +6,10 @@ import Budget from "../ManageCampaign/Component/Budget/Budget";
 import CampaignSummary from "../ManageCampaign/Component/AddCampaign/CampaignSummary";
 import AddCampaign from "../ManageCampaign/Component/AddCampaign/AddCampaign";
 import ActiveCampaign from "../ManageCampaign/Component/ActiveCampaign/ActiveCampaign";
+import DiscoverInfluencer from "../DiscoverInfluencer/DiscoverInfluencer";
+
+import Profile from "../ProfileComponent/Profile";
+import Favourites from "../Favourites/Favourites";
 
 const MainRouter = () => {
   return (
@@ -14,11 +18,7 @@ const MainRouter = () => {
         <Route path="/" element={<Dashboard />} />
         <Route
           path="/discoverInfluencers"
-          element={
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-400">
-              Discover Influencers
-            </div>
-          }
+          element={<DiscoverInfluencer/>}
         />
         <Route
           path="/manageCampaign"
@@ -45,13 +45,12 @@ const MainRouter = () => {
           }
         />
         <Route
-          path="/favorites"
-          element={
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-400">
-              {" "}
-              Favorites
-            </div>
-          }
+          path="/viewFavourites"
+          element={<Favourites/>}
+        />
+         <Route
+          path="/viewProfile"
+          element={<Profile/>}
         />
         <Route
           path="/influencersBase"
@@ -97,6 +96,9 @@ const MainRouter = () => {
           path="/ActiveCampaign"
           element={<ActiveCampaign/>}
         />
+       
+        
+       
       </Routes>
       
     </>
